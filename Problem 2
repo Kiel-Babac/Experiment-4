@@ -1,0 +1,90 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	char sort;
+	int i, j, size, kupal, arr[50];
+	
+	cout << "Enter Array Size: ";
+	cin >> size;
+	
+	cout << "Bubble or Selection sorting <A/B>: ";
+	cin >> sort;
+
+	switch (sort)
+	{	
+		case 'A':
+		case 'a':
+		cout << "Bubble Sorting!\n";
+		cout << "Enter Array Elements: \n";
+		
+		for (i = 0; i < size; i++)
+		{
+			cin >> arr[i];
+			cout << arr[i] << ", ";
+		}	
+		
+		cout << endl << endl;
+		for (i = 0; i < size; i++)
+		{
+			for  (j = 0; j < size - i - 1; j++)
+			{
+				if (arr[j] > arr[j+1])
+				{
+					kupal = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = kupal;
+				}
+			}
+		}
+		
+		cout << "The array elements after sorting is: \n";
+		for (i = 0; i < size; i++)
+		{
+			cout << arr[i] << ", ";
+		}
+		break;
+		
+		case 'B':
+		case 'b':
+		cout << "Selection Sorting!\n";
+		cout << "Enter Array Elements: \n";
+		for(i = 0; i < size; i++)
+		{
+			cin >> arr[i];
+		}
+		cout << "Sorting Array using selection sort...\n";
+		for(i = 0; i < size; i++)
+		{
+			for(j = i + 1; j < size; j++)
+			{
+				if(arr[i] > arr[j])
+				{
+					kupal = arr[i];
+					arr[i] = arr[j];
+					arr[j] = kupal;
+				}
+			}
+		}
+		
+		cout << "Now the array after sorting is : \n";
+		for(i = 0; i < size; i++)
+		{
+			cout << arr[i] << " ";
+		}
+		break;
+		
+	
+		
+		default:
+		cout << "Invalid!";	
+		break;	
+	}
+
+
+_getch();
+return 0;
+}
