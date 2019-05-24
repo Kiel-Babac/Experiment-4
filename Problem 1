@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+	int x, y, option;
+	char confirm;
+	
+	cout<<"MENU";
+	cout<<"\t 1. Add"<<endl;
+	cout<<"\t 2. Subtract"<<endl;
+	cout<<"\t 3. Multiply"<<endl;
+	cout<<"\t 4. Divide"<<endl;
+	cout<<"\t 5. Modulus "<<endl;
+	
+	do{
+	cout<<"Enter your choice (choose from 1 to 5): "<<endl;
+	
+	cin>>option;
+	cout<<"Enter your two numbers: "<<endl;
+	cin>>x>>y;
+
+	int a;
+	a=x+y;
+	
+	int b;
+	b=x-y;
+	
+	int c;
+	c=x*y;
+	
+	int d;
+	d=x/y;
+	
+	int e;
+	e=x%y;
+	
+switch (option)
+{
+	case 1:
+	cout<<a<<endl;
+	break;
+	
+	case 2:
+	cout<<b<<endl;
+	break;
+	
+	case 3:
+	cout<<c<<endl;
+	break;
+	
+	case 4:
+	cout<<d<<endl;
+	
+	case 5:
+	cout<<e<<endl;
+}
+
+cout<<"Enter Y to continue the operation: ";
+cin>>confirm;
+}
+while(confirm=='Y');
+}
